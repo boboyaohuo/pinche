@@ -1,0 +1,82 @@
+/**release.wxss**/
+
+
+.release-prompt {
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #373431;
+}
+
+.release-line {
+  display: flex;
+  height: 100rpx;
+  background: #ffffff;
+  margin-bottom: 8rpx;
+  font-size: 30rpx;
+  color: #373431;
+  padding: 0 36rpx;
+}
+
+.line-lable {
+  flex: 120rpx 0 0 ;
+  width: 120rpx;
+  text-align: left;
+  line-height: 100rpx;
+}
+
+.line-item {
+  flex: 1;
+  text-align: right;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 22rpx 0 18rpx 0;
+  white-space: nowrap;
+}
+
+.release-remark {
+  display: flex;
+  min-height: 100rpx;
+  background: #ffffff;
+  margin-bottom: 8rpx;
+  font-size: 30rpx;
+  color: #373431;
+  padding: 0 36rpx;
+}
+
+.line-textarea {
+  flex: 1;
+  border: 1rpx solid #ffab65;
+  border-radius: 10rpx;
+  min-height: 120rpx;
+  padding: 12rpx;
+  margin: 22rpx 0rpx 18rpx 0;
+}
+
+.relief-label {
+  display: flex;
+  font-size: 34rpx;
+  align-items: center;
+  justify-content: center;
+  color: #373431;
+  margin-top: 50rpx;
+}
+
+.relief-nav {
+  color: red;
+}
+
+.release-button {
+  margin: 50rpx 0;
+  background: #ffab65;
+  color: #ffffff;
+}
+
+.release-button-hover {
+  box-shadow: 0rpx 0rpx 60rpx #ffab65;
+}
+
+.release-button::after {
+  border: none;
+}

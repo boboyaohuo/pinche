@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/detail/detail",
+    "pages/release/release",
+    "pages/release/relief/relief",
+    "pages/minerelease/minerelease"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffab56",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "拼车回家啦",
+    "backgroundColor": "#ffab56",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#8d8a88",
+    "selectedColor": "#ffab65",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "列表",
+        "iconPath": "image/list.png",
+        "selectedIconPath": "image/list-selected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "image/mine.png",
+        "selectedIconPath": "image/mine-selected.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

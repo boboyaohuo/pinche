@@ -1,0 +1,74 @@
+/**detail.wxss**/
+
+.detail-path {
+  background: #ffffff;
+  padding: 20rpx;
+  line-height: 48rpx;
+  font-size: 36rpx;
+  border-bottom: 10rpx solid #eeeeee;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail-item {
+  background: #ffffff;
+  line-height: 48rpx;
+  padding: 20rpx 20rpx 0 20rpx;
+}
+
+.detail-item-title {
+  font-size: 28rpx;
+  color: #9a9d99;
+}
+
+.detail-item-text {
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #eeeeee;
+  padding-bottom: 20rpx;
+}
+
+.detail-flex {
+  display: flex;
+  font-size: 32rpx;
+  padding-bottom: 20rpx;
+}
+
+.detail-name {
+  padding-right: 20rpx;
+  max-width: 200rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.detail-contact-icon {
+  flex: 36rpx 0 0;
+  padding-top: 5rpx;
+}
+
+.detail-contact-icon image{
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.detail-contact {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.share-button {
+  margin-top: 100rpx;
+  background: #ffab65;
+  color: #ffffff;
+}
+
+.share-button-hover {
+  box-shadow: 0rpx 0rpx 60rpx #ffab65;
+}
+
+.share-button::after {
+  border: none;
+}
+

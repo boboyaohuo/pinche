@@ -1,0 +1,100 @@
+/* pages/minerelease/minerelease.wxss */
+
+.list {
+  margin: 18rpx ;
+  padding: 10rpx;
+  background: #ffffff;
+  border-radius: 6rpx;
+  box-shadow: 0 5rpx 10rpx 1rpx #cccccc;
+  position: relative;
+}
+
+.list-mark {
+  position: absolute;
+  font-weight: 600;
+  top: 36rpx;
+  right: 10rpx;
+  padding: 3rpx;
+  font-size: 22rpx;
+  color: #ff7073;
+  transform: rotateZ(45deg);
+  border: 1px solid #ff7073;
+  border-radius: 6rpx;
+}
+
+.list-path {
+  padding: 13rpx 0;
+  font-size: 34rpx;
+  color: #373431;
+}
+
+.list-path-start::before {
+  content: '始';
+  padding: 11rpx 11rpx;
+  background: #f5b977;
+  color: #ffffff;
+  font-size: 24rpx;
+  border-radius: 10rpx;
+  position: relative;
+  top: -2rpx;
+  margin-right: 10rpx;
+}
+
+.list-path-end::before {
+  content: '终';
+  padding: 11rpx 11rpx;
+  background: #4fb3a4;
+  color: #ffffff;
+  font-size: 24rpx;
+  border-radius: 10rpx;
+  position: relative;
+  top: -2rpx;
+  margin-right: 10rpx;
+}
+
+.list-time {
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #8a8d88;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.list-flex {
+  display: flex;
+  font-size: 30rpx;
+  color: #8a8d88;
+  height: 60rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.list-point::before {
+  content: '-';
+  padding: 0 6rpx;
+} 
+
+.list-flex .list-point:first-child::before {
+  content: '';
+  padding: 0;  
+}  
+
+.none {
+  width: 100%;
+  text-align: center;
+  color: #7c8489;
+  margin-top: 400rpx;
+}
+
+.end {
+  width: 100%;
+  text-align: center;
+  color: #7c8489;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-bottom: 18rpx;
+}

@@ -1,0 +1,65 @@
+<!--release.wxml-->
+
+<view class='contain'>
+  <view class='release-prompt'>请填写的足够详细，提高与需求者的匹配度</view>
+  <view class='release-line'>
+    <label class='line-lable'>联系人</label>
+    <input class='line-item' type='text' placeholder='您的称呼' confirm-type='done' bindinput='bindName'></input>
+  </view>
+  <view class='release-line'>
+    <label class='line-lable'>联系方式</label>
+    <picker class='line-item' style='flex: 160rpx 0 0 ;' mode='selector' bindchange="bindCantactPicker" range='{{contactArray}}' value='{{contactType}}'>{{contactType}}</picker>
+    <input class='line-item' type='text' placeholder='联系号码' confirm-type='done' bindinput='bindContact'></input>
+  </view>
+    <view class='release-line'>
+    <label class='line-lable'>时效</label>
+    <radio-group class='line-item' bindchange="bindTimeType">
+      <label class='radio'>
+        <radio value='1' checked/>单次
+      </label>
+      <label class='radio'>
+        <radio value='2'/>长期
+      </label>
+    </radio-group>
+  </view>
+  <view class='release-line' wx:if="{{timeType == 1}}">
+    <label class='line-lable'>出发日期</label>
+    <picker class='line-item' mode="date" start="2018-01-01" bindchange="bindDate">{{dateValue}}</picker>
+  </view>
+  <view class='release-line'>
+    <label class='line-lable'>出发时间</label>
+    <picker class='line-item' mode="time" start="06:01" end="21:01" bindchange="bindTime">{{timeValue}}</picker>
+  </view>
+  <view class='release-line'>
+    <label class='line-lable'>出发地</label>
+    <picker class='line-item' style='flex: 300rpx 0 0; overflow: hidden;width: 300rpx;' mode='region' bindchange="bindStartAddPicker" value='{{startAddValue}}'>{{startAddValue}}</picker>
+    <input class='line-item' type='text' placeholder='补充详细' confirm-type='done' value='{{startPointValue}}' bindchange='bindStartPoint'></input>
+  </view>
+  <view class='release-line'>
+    <label class='line-lable'>目的地</label>
+    <picker class='line-item' style='flex: 300rpx 0 0; overflow: hidden;width: 300rpx;' mode='region' bindchange="bindEndAddPicker" value='{{endAddValue}}'>{{endAddValue}}</picker>
+    <input class='line-item' type='text' placeholder='补充详细' confirm-type='done' value='{{endPointValue}}' bindchange='bindEndPoint'></input>
+  </view>
+  <view class='release-prompt' style='line-height: 40rpx;height: 40rpx;margin-top: 20rpx;'>请填写出发，途径，目的道路或地点</view>
+  <view class='release-prompt' style='line-height: 40rpx;height: 40rpx;margin-bottom: 20rpx;'>多个请用“，”隔开，例“北京，京津高速，天津”</view>
+  <view class='release-line'>
+    <label class='line-lable'>途径地</label>
+    <input class='line-item' type='text' placeholder='请填写途径地或道路' confirm-type='done' bindinput='bindPath'></input>
+  </view>
+    <view class='release-line'>
+    <label class='line-lable'>剩余座位</label>
+    <picker class='line-item' mode='selector' bindchange="bindSeatPicker" range='{{seatArray}}' value='{{seatValue}}'>{{seatValue}}</picker>
+  </view>
+    <view class='release-line'>
+    <label class='line-lable'>车费（元）</label>
+    <input class='line-item' type='number' placeholder='车费每人次' confirm-type='done' bindinput='bindFare'></input>
+  </view>
+  <view class='release-remark'>
+    <label class='line-lable'>备注</label>
+    <textarea class='line-textarea' placeholder='例如车上不能吃东西，不能吸烟，车型' auto-height bindinput='bindRemark'></textarea>
+  </view>
+  <label class='relief-label'>
+    <checkbox checked/>我已经阅读并同意<view class='relief-nav' catchtap='catchRelief'>《免责声明》</view>中的内容
+  </label>
+  <button class='release-button' bindtap='bindRelease' hover-class='release-button-hover'>发布</button>
+</view>

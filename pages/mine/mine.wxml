@@ -1,0 +1,21 @@
+<!-- mine.wxml -->
+<view wx:if="{{hasContain}}" class='contain'>
+  <button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='getUserInfo-button' hover-class='getUserInfo-button-hover'> 立即登录 </button>
+  <block wx:else>
+    <view class='user'>
+      <view class="userBackground" style='background-image:url({{userInfo.avatarUrl}})'></view>
+      <view class="userinfo">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </view>
+    </view>
+    <view class='list'>
+      <navigator url='../minerelease/minerelease' class='list-item'>
+        我的发布
+      </navigator>
+      <view class='list-item'>
+        更多功能上线中
+      </view>
+    </view>
+  </block>
+</view>

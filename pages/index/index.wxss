@@ -1,0 +1,191 @@
+/**index.wxss**/
+
+.search {
+  padding: 20rpx 8rpx;
+  background: #ffab65;
+}
+
+.search-view {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0 10rpx;
+  height: 70.4rpx;
+  border-radius: 35rpx;
+  background: #fff url('http://btcf.oss-cn-hangzhou.aliyuncs.com/img/H5/icon/search-icon.png') no-repeat 15rpx center/40rpx;
+  padding: 10rpx 35rpx 10rpx 70.4rpx;
+  color: #7c8489;
+  line-height: 50.4rpx;
+}
+
+.search-time {
+  background: #fff url('http://btcf.oss-cn-hangzhou.aliyuncs.com/img/H5/icon/time-icon.png') no-repeat 15rpx center/40rpx;  
+}
+
+.search-picker {
+  height: 50.4rpx;
+  line-height: 50.4rpx;
+  font-size: 28rpx;
+  text-align: center;
+  flex: 300rpx 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.search-input {
+  flex: 1;
+  height: 50.4rpx;
+  line-height: 50.4rpx;
+  font-size: 28rpx;
+}
+
+.search-input-place {
+  color: #7c8489;
+}
+
+.search-button-group {
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.search-button {
+  width: 200rpx;
+  line-height: 70.4rpx;
+  padding: 0;
+  margin: 0;
+  font-size: 34rpx;
+  color: #7c8489 !important;
+}
+
+.search-button::after {
+  border: none;
+}
+
+.list {
+  margin: 18rpx ;
+  padding: 10rpx;
+  background: #ffffff;
+  border-radius: 6rpx;
+  box-shadow: 0 5rpx 10rpx 1rpx #cccccc;
+  position: relative;
+}
+
+.list-mark {
+  position: absolute;
+  font-weight: 600;
+  top: 36rpx;
+  right: 10rpx;
+  padding: 3rpx;
+  font-size: 22rpx;
+  color: #ff7073;
+  transform: rotateZ(45deg);
+  border: 1px solid #ff7073;
+  border-radius: 6rpx;
+}
+
+.list-path {
+  padding: 13rpx 0;
+  font-size: 34rpx;
+  color: #373431;
+}
+
+.list-path-start::before {
+  content: '始';
+  padding: 11rpx 11rpx;
+  background: #f5b977;
+  color: #ffffff;
+  font-size: 24rpx;
+  border-radius: 10rpx;
+  position: relative;
+  top: -2rpx;
+  margin-right: 10rpx;
+}
+
+.list-path-end::before {
+  content: '终';
+  padding: 11rpx 11rpx;
+  background: #4fb3a4;
+  color: #ffffff;
+  font-size: 24rpx;
+  border-radius: 10rpx;
+  position: relative;
+  top: -2rpx;
+  margin-right: 10rpx;
+}
+
+.list-time {
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #8a8d88;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.list-flex {
+  display: flex;
+  font-size: 30rpx;
+  color: #8a8d88;
+  height: 60rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.list-point::before {
+  content: '-';
+  padding: 0 6rpx;
+} 
+
+.list-flex .list-point:first-child::before {
+  content: '';
+  padding: 0;  
+}  
+
+.none {
+  width: 100%;
+  text-align: center;
+  color: #7c8489;
+  margin-top: 400rpx;
+}
+
+.end {
+  width: 100%;
+  text-align: center;
+  color: #7c8489;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-bottom: 18rpx;
+}
+
+.release {
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  bottom: 90rpx;
+  width: 170rpx;
+  transition: all 1s;
+}
+
+.release-right {
+  right: -115rpx;
+}
+
+.release-button {
+  padding: 0;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-indent: 40rpx;
+  border-radius: 25rpx 0 0 25rpx;
+  font-size: 24rpx;
+  color: #fff;
+  background: #ffab65 url('http://btcf.oss-cn-hangzhou.aliyuncs.com/img/H5/icon/release-icon.png') no-repeat 10rpx center/40rpx;
+}
+
+.release-button::after {
+  border: none;
+}
+

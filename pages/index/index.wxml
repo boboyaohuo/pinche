@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class='contain'>
+  <view class='search'>
+    <view class='search-view'>出发地
+      <picker class='search-picker' mode='region' bindchange="bindStartAddPicker" value='{{startAddValue}}'>{{startAddValue}}</picker>
+      <input type='text' value='{{searchValueFir}}' class='search-input' placeholder-class='search-input-place' placeholder='详细地点或道路' confirm-type='search' bindconfirm='bindSearch' bindinput='bindSearchValueFir'></input>
+    </view>
+    <view class='search-view' style='margin-top: 20rpx;'>目的地
+      <picker class='search-picker' mode='region' bindchange="bindEndAddPicker" value='{{startAddValue}}'>{{endAddValue}}</picker>
+      <input type='text' value='{{searchValueSec}}' class='search-input' placeholder-class='search-input-place' placeholder='详细地点或道路' confirm-type='search' bindconfirm='bindSearch' bindinput='bindSearchValueSec'></input>
+    </view>
+    <view class='search-view search-time' style='margin-top: 20rpx;'>
+      <picker class='search-picker' mode="date" start="2018-01-01" bindchange="bindDate">{{dateValue}}</picker>
+      <picker class='search-picker' mode="time" start="06:01" end="21:01" bindchange="bindTime">{{timeValue}}</picker>
+    </view>
+    <view class='search-button-group'>
+     <button class='search-button' type='default' bindtap='bindExchange'>互换</button>  
+     <button class='search-button' type='default' bindtap='bindClean'>清除</button>  
+     <button class='search-button' type='default' bindtap='bindSearch'>搜索</button>  
+    </view>
+  </view>
+  <loading wx:if="{{!hasList}}">加载中</loading>
+  <block wx:else>
+    <navigator url='/pages/detail/detail?numValue={{item.number}}' class='list' wx:for="{{list}}" wx:key="{{index}}">
+      <view class='list-mark' wx:if='{{item.rulesType==2}}'>长期往返</view>
+      <view class='list-path list-path-start'>{{item.startPoint}}</view>
+      <view class='list-path list-path-end'>{{item.endPoint}}</view>
+      <view class='list-time list-time-start'>出发时间：{{item.startTime}}</view>
+      <view class='list-flex'>
+        途径地：<view class='list-point' wx:for="{{list[index].pointlist}}" wx:for-item="pointList" wx:key="pointListIndex">{{pointList.point}}</view>
+      </view>
+      <view class='list-flex'>
+        <view>空座{{item.seatCount}}个</view>/<view>费用{{item.unitPrice}}元</view>
+      </view>
+    </navigator>
+  </block>
+  <view class='end' wx:if='{{list.length>0&&listEnd}}'>伦家也是有底线的~</view>  
+  <view class='none' wx:if='{{list.length==0&&hasList}}'>暂无相关车程</view>
+  <view class="release {{hasScroll?'release-right':''}}" fixed='true'>
+    <button class='release-button' wx:if="{{hasUserInfo}}" bindtap='bindRelease'>我要发布</button>
+    <button class='release-button' wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 我要发布 </button>
+  </view>
+</view>

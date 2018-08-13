@@ -1,0 +1,15 @@
+/**reset**/
+.contain {
+  height: 100%;
+}
+
+page {
+  heigth: 100%;
+  background: #eeeeee;
+}
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}

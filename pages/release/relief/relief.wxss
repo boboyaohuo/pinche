@@ -1,0 +1,22 @@
+/** relief **/
+
+.relief {
+  background: #ffffff;
+  padding: 10rpx 36rpx;
+  font-size: 32rpx;
+  line-height: 48rpx;
+  text-indent: 64rpx;
+}
+
+.relief-button {
+  width: 100%;
+  height: 100rpx;
+  margin: 50rpx 0;
+  background: #ffab65;
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 100rpx;
+  text-indent: 0;
+  font-size: 42rpx;
+}

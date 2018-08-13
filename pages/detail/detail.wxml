@@ -1,0 +1,39 @@
+<!-- detail.wxml -->
+<view class='contain'>
+  <view class='detail-path'>
+    <view>{{detail.startPoint}}</view>
+    <view class='detail-path-list' wx:for='{{detail.pointlist}}' wx:key="{{pointlistIndex}}">-{{item.point}}</view>
+    <view>-{{detail.endPoint}}</view>
+  </view>
+  <view class='detail-item'>
+    <view class='detail-item-title'>出发时间</view>
+    <view class='detail-flex detail-item-text'>
+      <view wx:if='{{detail.startDate}}'>{{detail.startDate}}</view>
+      <view wx:if='{{!detail.startDate}}'>每天</view>
+      <view>{{detail.startTime}}</view>
+    </view>
+  </view>
+  <view class='detail-item'>
+    <view class='detail-item-title'>基本信息</view>
+    <view class='detail-item-text'>空座{{detail.seatCount}}个/车费{{detail.unitPrice}}元每人</view>
+  </view>
+  <view class='detail-item'>
+    <view class='detail-item-title'>备注</view>
+    <view class='detail-item-text'>{{detail.remark}}</view>
+  </view>
+  <view class='detail-item'>
+    <view class='detail-item-title'>联系人</view>
+    <view class='detail-flex'>
+        <view class='detail-name'>{{detail.name}}</view>
+        <view class='detail-contact-icon'>
+           <image wx:if="{{detail.contactType==1}}" src='/image/tel.png'></image> 
+           <image wx:if="{{detail.contactType==2}}" src='/image/qq.png'></image> 
+           <image wx:if="{{detail.contactType==3}}" src='/image/wechat.png'></image> 
+        </view>
+        <view class='detail-contact' wx:if="{{detail.contactType==1}}" bindtap='bindTel'>{{mobile}}(点击拨号)</view>
+        <view class='detail-contact' wx:if="{{detail.contactType!=1}}" bindtap='bindCopy'>{{detail.mobile}}(点击复制)</view>
+      </view>
+  </view>
+  <button wx:if='{{!share}}' open-type='share' class='share-button' hover-class='share-button-hover'>分享</button>
+  <button wx:if='{{share}}' class='share-button' bindtap='bindMore' hover-class='share-button-hover'>查看更多</button>
+</view>

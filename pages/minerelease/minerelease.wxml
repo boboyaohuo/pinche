@@ -1,0 +1,21 @@
+<!--pages/minerelease/minerelease.wxml-->
+
+<view>
+  <loading wx:if="{{!hasList}}">加载中</loading>
+  <block wx:else>
+    <navigator url='/pages/detail/detail?numValue={{item.number}}' class='list' wx:for="{{list}}" wx:key="{{index}}">
+      <view class='list-mark' wx:if='{{item.rulesType==2}}'>长期往返</view>
+      <view class='list-path list-path-start'>{{item.startPoint}}</view>
+      <view class='list-path list-path-end'>{{item.endPoint}}</view>
+      <view class='list-time list-time-start'>出发时间：{{item.startTime}}</view>
+      <view class='list-flex'>
+        途径地：<view class='list-point' wx:for="{{list[index].pointlist}}" wx:for-item="pointList" wx:key="pointListIndex">{{pointList.point}}</view>
+      </view>
+      <view class='list-flex'>
+        <view>空座{{item.seatCount}}个</view>/<view>费用{{item.unitPrice}}元</view>
+      </view>
+    </navigator>
+  </block>
+  <view class='end' wx:if='{{list.length>0&&listEnd}}'>伦家也是有底线的~</view>  
+  <view class='none' wx:if='{{list.length==0&&hasList}}'>暂无相关车程</view>
+</view>
